@@ -2,7 +2,7 @@ Hello there,
 
 I've tried completing all the problem statements given in the Machine Test 1.
 
->used Bootstrap 5 to build the HTML and all the components
+I have used Bootstrap 5 to build the HTML and all the components
 
 1. Created a Carousel of 3 images with sliding.
 
