@@ -10,8 +10,12 @@ xhr.onload = function () {
 
         data.forEach(element => {
             // console.log(element);
-            let blogElm = `<div class="col-md-3">
-                                <div class="card my-2" id="">
+
+            // let bgColor = "bg-success";
+
+            if (element.id % 3) {
+                let blogElm = `<div class="col-md-3">
+                                <div class="card my-2 ${element.id % 2 == 0 ? "bg-success" : element.id == 95 ? "bg-danger" : ""}" id="">
                                     <div class="card-body">
                                         <h5 class="position-relative ">Blog ${element.id}</h5>
                                         <h3 class="card-title my-3">${element.title ? element.title.slice(0, 25) : ""}</h3>
@@ -39,9 +43,14 @@ xhr.onload = function () {
                         </div>
             `
 
-            blogs.innerHTML += blogElm;
-        });
+                blogs.innerHTML += blogElm;
 
-        // console.log(data);
+            }
+        })
     }
+
 }
+
+
+
+    // console.log(data);
